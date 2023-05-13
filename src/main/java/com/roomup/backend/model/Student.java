@@ -14,17 +14,19 @@ public class Student {
     private Date dob;
     private String gender;
     private String username;
+    private String password;
     private String room;
     private String admissionID;
     private String email;
     public Student() {
     }
 
-    public Student(String name, Date dob, String gender, String username, String room, String admissionID, String email) {
+    public Student(String name, Date dob, String gender, String username, String password, String room, String admissionID, String email) {
         this.name = name;
         this.dob = dob;
         this.gender = gender;
         this.username = username;
+        this.password = password;
         this.room = room;
         this.admissionID = admissionID;
         this.email = email;
@@ -68,6 +70,14 @@ public class Student {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRoom() {

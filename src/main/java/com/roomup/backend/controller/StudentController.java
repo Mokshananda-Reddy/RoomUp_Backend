@@ -21,8 +21,24 @@ public class StudentController {
     @GetMapping("/students")
     List<Student> getAllPatients()
     {
-        // return "Hello World";
         return studentRepository.findAll();
     }
 
+    @GetMapping("/getstudentid")
+    Student getCurrentStudentDetails(@RequestParam("username") String username)
+    {
+        Student s1 = new Student(null, null, null, null, null, null, null, null);
+        try
+        {
+            Student s = studentRepository.getStudentIDbyUsername(username);
+            return s;
+        }
+
+
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return s1;
+    }
 }

@@ -7,14 +7,6 @@ import java.util.Date;
 @Entity
 public class Block {
 
-    public Long getBlockID() {
-        return blockID;
-    }
-
-    public void setBlockID(Long blockID) {
-        this.blockID = blockID;
-    }
-
     @Id
     @GeneratedValue
     private Long blockID;
@@ -23,22 +15,31 @@ public class Block {
     private Date dob;
     private String gender;
     private String username;
+    private String password;
     private String email;
     private String registeredID;
 
     public Block() {
     }
 
-    public Block(String name, Date dob, String gender, String username, String email, String registeredID) {
+    public Block(String name, Date dob, String gender, String username, String password, String email, String registeredID) {
         this.name = name;
         this.dob = dob;
         this.gender = gender;
         this.username = username;
+        this.password = password;
         this.email = email;
         this.registeredID = registeredID;
 
     }
 
+    public Long getBlockID() {
+        return blockID;
+    }
+
+    public void setBlockID(Long blockID) {
+        this.blockID = blockID;
+    }
     public String getName() {
         return name;
     }
@@ -77,6 +78,14 @@ public class Block {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRegisteredID() {
