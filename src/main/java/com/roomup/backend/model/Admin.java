@@ -7,29 +7,27 @@ import java.util.Date;
 @Entity
 public class Admin {
 
-    public Long getAdminID() {
-        return adminID;
-    }
-
-    public void setAdminID(Long adminID) {
-        this.adminID = adminID;
-    }
-
     @Id
     @GeneratedValue
     private Long adminID;
     private String name;
 
     private String username;
-    private Integer status;
 
     public Admin() {
     }
 
-    public Admin(String name, String username, Integer status) {
+    public Admin(String name, String username) {
         this.name = name;
         this.username = username;
-        this.status = status;
+    }
+
+    public Long getAdminID() {
+        return adminID;
+    }
+
+    public void setAdminID(Long adminID) {
+        this.adminID = adminID;
     }
 
     public String getName() {
@@ -46,14 +44,6 @@ public class Admin {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
     }
 
 }

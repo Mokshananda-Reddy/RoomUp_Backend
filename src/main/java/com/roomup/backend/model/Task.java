@@ -18,16 +18,27 @@ public class Task {
     private Date date;
     private String description;
     private String feedback;
+    private String room;
+
 
     public Task() {
     }
 
-    public Task(String service, Date date,String description, String feedback, Long status, Long studentID) {
+    public Task(String service, Date date,String description, String feedback, Long studentID, String room) {
         this.service = service;
         this.date = date;
         this.description = description;
         this.feedback = feedback;
         this.studentID = studentID;
+        this.room = room;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
     }
 
     public Long getStudentID() {

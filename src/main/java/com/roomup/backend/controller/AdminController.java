@@ -13,6 +13,11 @@ public class AdminController {
     @Autowired
     private AdminRepository adminRepository;
 
+    @Autowired
+    public AdminController(AdminRepository adminRepository) {
+        this.adminRepository = adminRepository;
+    }
+
     @PostMapping("/admin")
     Admin newAdmin(@RequestBody Admin newAdmin)
     {
