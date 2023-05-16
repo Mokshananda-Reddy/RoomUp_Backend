@@ -11,12 +11,6 @@ public class LoginDetails {
     private String role;
     private String password;
 
-//    public LoginDetails(String username, String password) {
-//        this.username = username;
-//        this.password = password;
-//        this.role = "1";
-//    }
-
     public LoginDetails() {
     }
 
